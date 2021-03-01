@@ -243,6 +243,7 @@ __attribute((overloadable)) static inline UIViewController *RTSafeWrapViewContro
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    self.view.backgroundColor = UIColor.blackColor;
     if (self.containerNavigationController) {
         self.containerNavigationController.view.autoresizingMask = UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleWidth;
         [self.view addSubview:self.containerNavigationController.view];
@@ -391,6 +392,8 @@ __attribute((overloadable)) static inline UIViewController *RTSafeWrapViewContro
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    self.view.backgroundColor = UIColor.blackColor;
     
     //self.interactivePopGestureRecognizer.delegate = nil;
     self.interactivePopGestureRecognizer.enabled = NO;
@@ -683,7 +686,7 @@ __attribute((overloadable)) static inline UIViewController *RTSafeWrapViewContro
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    self.view.backgroundColor = [UIColor whiteColor];
+    self.view.backgroundColor = [UIColor blackColor];
     
     [super setDelegate:self];
     [super setNavigationBarHidden:YES
